@@ -15,7 +15,7 @@
 
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
-usethis::use_package( "thinkr" )
+usethis::use_package("thinkr")
 usethis::use_package("DBI")
 usethis::use_package("bigrquery")
 usethis::use_package("basedosdados")
@@ -30,7 +30,6 @@ usethis::use_package("rsconnect")
 usethis::use_package("hunspell")
 usethis::use_package("spelling")
 usethis::use_package("rmarkdown")
-usethis::use_dev_package("shiny")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
