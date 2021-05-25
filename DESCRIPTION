@@ -1,0 +1,36 @@
+Package: vacinacaodf
+Title: Dados de Vacinação do Distrito Federal
+Version: 0.0.0.9000
+Authors@R: person('Fernando', 'Bastos', email = 'fernando.bastos.neto@gmail.com', role = c('cre', 'aut'))
+Description: Evolução e perspectivas da vacinação contra COVID-19 no DF.
+License: MIT + file LICENSE
+Imports: 
+    attempt,
+    basedosdados,
+    bigrquery,
+    config (>= 0.3.1),
+    DBI,
+    dplyr,
+    DT,
+    ggplot2,
+    glue,
+    golem (>= 0.3.1.9000),
+    htmltools,
+    processx,
+    scales,
+    shiny (>= 1.6.0.9000),
+    shinydashboard,
+    stringr,
+    thinkr,
+    tibble,
+    zoo
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    spelling,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Language: en-US
+Depends: 
+    R (>= 2.10)
