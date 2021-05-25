@@ -3,7 +3,7 @@ library(bigrquery)
 library("basedosdados")
 library(tidyverse)
 
-bq_auth(path = "data-raw/dadoscovid-9483c906fc54.json")
+bq_auth(path = Sys.getenv("TOKEN"))
 set_billing_id("dadoscovid")
 
 # Dados de vacinas (do distrito federal) --------------------------------------------------------
