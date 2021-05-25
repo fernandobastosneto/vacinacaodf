@@ -18,7 +18,7 @@ WHERE sigla_uf = 'DF'"
 
 df_vac <- read_sql(query)
 
-use_data(df_vac, overwrite = T)
+usethis::use_data(df_vac, overwrite = T)
 
 
 # Dados de População do DF ------------------------------------------------
