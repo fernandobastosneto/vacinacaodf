@@ -21,19 +21,24 @@ jobs:
 
       - name: Instalar R
         uses: r-lib/actions/setup-r@v1
-      - uses: r-lib/actions/setup-pandoc@v1
 
-      - name: Instalar libgit
-        run: |
-          brew install libgit2
-        
       - name: Instalar dependencias
         run: |
           install.packages("remotes")
           install.packages("shiny")
           remotes::install_local(".")
           remotes::install_dev("golem")
-          remotes::install_cran("tidyverse")
+          usethis::install_dev("DBI")
+          usethis::install_dev("bigrquery")
+          usethis::install_dev("basedosdados")
+          usethis::install_dev("dplyr")
+          usethis::install_dev("stringr")
+          usethis::install_dev("ggplot2")
+          usethis::install_dev("scales")
+          usethis::install_dev("zoo")
+          usethis::install_dev("shinydashboard")
+          usethis::install_dev("tibble")
+
         shell: Rscript {0}
       
       - name: create-json

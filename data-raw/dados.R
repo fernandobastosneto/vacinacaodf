@@ -3,7 +3,7 @@ library(bigrquery)
 library("basedosdados")
 library(tidyverse)
 
-bq_auth(path = "~/creds.json")
+bq_auth(path = "creds.json")
 set_billing_id("dadoscovid")
 
 # Dados de vacinas (do distrito federal) --------------------------------------------------------
