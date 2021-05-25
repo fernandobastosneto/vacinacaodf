@@ -20,6 +20,7 @@ df_vac <- read_sql(query)
 
 usethis::use_data(df_vac, overwrite = T)
 
+Sys.sleep(2)
 
 # Dados de População do DF ------------------------------------------------
 
