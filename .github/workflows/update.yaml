@@ -28,16 +28,16 @@ jobs:
           install.packages("shiny")
           remotes::install_local(".")
           remotes::install_dev("golem")
-          usethis::install_dev("DBI")
-          usethis::install_dev("bigrquery")
-          usethis::install_dev("basedosdados")
-          usethis::install_dev("dplyr")
-          usethis::install_dev("stringr")
-          usethis::install_dev("ggplot2")
-          usethis::install_dev("scales")
-          usethis::install_dev("zoo")
-          usethis::install_dev("shinydashboard")
-          usethis::install_dev("tibble")
+          remotes:install_dev("DBI")
+          remotes:install_dev("bigrquery")
+          remotes:install_dev("basedosdados")
+          remotes:install_dev("dplyr")
+          remotes:install_dev("stringr")
+          remotes:install_dev("ggplot2")
+          remotes:install_dev("scales")
+          remotes:install_dev("zoo")
+          remotes:install_dev("shinydashboard")
+          remotes:install_dev("tibble") remotes
 
         shell: Rscript {0}
       
