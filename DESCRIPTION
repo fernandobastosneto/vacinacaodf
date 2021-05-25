@@ -18,6 +18,7 @@ Imports:
     htmltools,
     hunspell,
     lubridate,
+    magrittr,
     pkgload,
     processx,
     rlang,

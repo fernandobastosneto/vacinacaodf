@@ -4,6 +4,7 @@ library("basedosdados")
 library(tidyverse)
 
 bq_auth(path = "creds.json")
+#
 set_billing_id("vacinacaodf")
 
 # Dados de vacinas (do distrito federal) --------------------------------------------------------
