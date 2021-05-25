@@ -42,7 +42,6 @@ jobs:
         with:
           name: "creds.json"
           json: ${{ secrets.TOKEN }}
-          dir: '~/'
       
       - name: Execute Script
         run: |
