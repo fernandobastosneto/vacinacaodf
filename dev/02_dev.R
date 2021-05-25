@@ -30,6 +30,7 @@ usethis::use_package("rsconnect")
 usethis::use_package("hunspell")
 usethis::use_package("spelling")
 usethis::use_package("rmarkdown")
+usethis::use_dev_package("shiny")
 
 ## Add modules ----
 ## Create a module infrastructure in R/

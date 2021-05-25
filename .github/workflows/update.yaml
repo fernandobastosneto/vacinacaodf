@@ -25,10 +25,11 @@ jobs:
       - name: Instalar dependencias
         run: |
           install.packages("remotes")
-          install.packages("shiny")
           remotes::install_local(".")
           remotes::install_dev("golem")
           remotes::install_dev("tidyverse")
+          remotes::install_dev("shiny")
+          
 
         shell: Rscript {0}
       
