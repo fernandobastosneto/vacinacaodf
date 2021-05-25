@@ -1,3 +1,5 @@
+#' @export
+
 vacinadosdiaanterior <- function() {
   
   vacinacaodf::df_vac %>% 

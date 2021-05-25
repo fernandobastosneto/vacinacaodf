@@ -1,3 +1,5 @@
+#' @export
+
 mediamoveludanca <- function() {
   
   media_hoje <- vacinacaodf::mediamovel7dias()

@@ -1,3 +1,5 @@
+#' @export
+
 piramide <- function() {
   
   populacao_total_df <- vacinacaodf::populacao_df %>% 

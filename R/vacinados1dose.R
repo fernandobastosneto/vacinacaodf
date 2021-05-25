@@ -1,3 +1,5 @@
+#' @export
+
 vacinados1dose <- function() {
   
   df_vac %>% 

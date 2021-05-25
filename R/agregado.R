@@ -1,3 +1,5 @@
+#' @export
+
 agregado <- function() {
   
   df_vac %>% 

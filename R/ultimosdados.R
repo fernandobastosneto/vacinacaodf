@@ -1,3 +1,5 @@
+#' @export
+
 ultimosdados <- function() {
   
   vacinacaodf::df_vac %>% 

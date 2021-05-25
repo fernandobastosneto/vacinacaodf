@@ -1,3 +1,5 @@
+#' @export
+
 mediamovel7diasgrafico <- function() {
   
   df_vac %>% 

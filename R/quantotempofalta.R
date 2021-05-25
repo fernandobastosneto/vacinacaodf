@@ -1,3 +1,5 @@
+#' @export
+
 quantotempofalta <- function() {
   
   populacao_total <- vacinacaodf::populacao_df %>% 

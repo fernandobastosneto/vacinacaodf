@@ -17,8 +17,10 @@ Imports:
     golem (>= 0.3.1.9000),
     htmltools,
     hunspell,
+    lubridate,
     pkgload,
     processx,
+    rlang,
     rmarkdown,
     rsconnect,
     scales,
@@ -28,6 +30,7 @@ Imports:
     stringr,
     thinkr,
     tibble,
+    tidyr,
     zoo
 Encoding: UTF-8
 LazyData: true
@@ -40,5 +43,5 @@ Depends:
     R (>= 2.10)
 URL: https://github.com/fernandobastosneto/vacinacaodf
 BugReports: https://github.com/fernandobastosneto/vacinacaodf/issues
-Remotes:  
+Remotes: 
     rstudio/shiny
