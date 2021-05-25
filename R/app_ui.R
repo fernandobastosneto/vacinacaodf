@@ -13,7 +13,7 @@ app_ui <- function(request) {
       shinydashboard::dashboardHeader(title = "Vacinação no DF"),
       shinydashboard::dashboardSidebar(
         shinydashboard::sidebarMenu(shinydashboard::menuItem("GitHub", icon = shiny::icon("fab fa-github"),
-                                                             href = "https://github.com/rstudio/shinydashboard/")
+                                                             href = "https://github.com/fernandobastosneto/vacinacaodf/")
         )
       ),
       shinydashboard::dashboardBody(
