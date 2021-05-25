@@ -3,8 +3,8 @@
 piramide <- function() {
   
   populacao_total_df <- vacinacaodf::populacao_df %>% 
-    mutate(populacao = as.numeric(populacao)) %>% 
-    pull(populacao)
+    dplyr::mutate(populacao = as.numeric(populacao)) %>% 
+    dplyr::pull(populacao)
   
   # Faixas da população https://www.ibge.gov.br/apps/populacao/projecao/box_piramideplay.php?ag=53
   

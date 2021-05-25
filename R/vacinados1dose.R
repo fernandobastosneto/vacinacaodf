@@ -17,9 +17,9 @@ vacinados1dose <- function() {
          caption = "Formulação: Fernando Bastos, Fonte: Ministério da Saúde, IBGE e basedosdados.org") +
     ggplot2::scale_y_continuous(labels = scales::label_number_si(accuracy = 0.1)) +
     ggplot2::theme_minimal() +
-    annotate(geom="text",x=as.Date("2021-05-05"),
+    ggplot2::annotate(geom="text",x=as.Date("2021-05-05"),
                                y=250000,label="Vacinados",fontface="bold", color = "white") +
-    annotate(geom="text",x=as.Date("2021-02-01"),
+    ggplot2::annotate(geom="text",x=as.Date("2021-02-01"),
              y=2500000,label="Por Vacinar",fontface="bold", color = "black")
   
 }
