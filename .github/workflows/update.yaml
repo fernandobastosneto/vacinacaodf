@@ -35,7 +35,15 @@ jobs:
           remotes::install_dev("golem")
           remotes::install_cran("tidyverse")
         shell: Rscript {0}
-        
+      
+      - name: create-json
+        id: create-json
+        uses: jsdaniell/create-json@1.1.2
+        with:
+          name: "creds.json"
+          json: ${{ secrets.TOKEN }}
+          dir: '~/'
+      
       - name: Execute Script
         run: |
           source('data-raw/dados.R')
