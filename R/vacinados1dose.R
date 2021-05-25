@@ -2,12 +2,16 @@
 
 vacinados1dose <- function() {
   
+  populacao_total_df <- vacinacaodf::populacao_df %>% 
+    dplyr::mutate(populacao = as.numeric(populacao)) %>% 
+    dplyr::pull(populacao)
+  
   df_vac %>% 
     dplyr::filter(dose == "1") %>% 
     dplyr::group_by(data_aplicacao) %>% 
     dplyr::count() %>% 
     dplyr::ungroup() %>% 
-    dplyr::mutate(rownumber = row_number()) %>% 
+    dplyr::mutate(rownumber = dplyr::row_number()) %>% 
     dplyr::mutate(agregado = zoo::rollapplyr(n, max(rownumber), sum, partial = T)) %>% 
     ggplot2::ggplot() +
     ggplot2::geom_area(ggplot2::aes(data_aplicacao, populacao_total_df, fill = populacao_total_df), alpha = 0.5, show.legend = F) +

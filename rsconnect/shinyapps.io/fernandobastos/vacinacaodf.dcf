@@ -1,0 +1,13 @@
+name: vacinacaodf
+title: vacinacaodf
+username:
+account: fernandobastos
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4182188
+bundleId: 4638687
+url: https://fernandobastos.shinyapps.io/vacinacaodf/
+when: 1621965870.49752
+lastSyncTime: 1621965870.49759
+asMultiple: FALSE
+asStatic: FALSE

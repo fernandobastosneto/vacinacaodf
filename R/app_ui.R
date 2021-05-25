@@ -33,7 +33,7 @@ app_ui <- function(request) {
         ),
         fluidRow(
           shinydashboard::box(title = "Média Móvel", shiny::plotOutput("mediamovel7diasgrafico")),
-          shinydashboard::box(title = "Agregado de Vacinas Aplicadas", shiny::plotOutput("agregado"))
+          shinydashboard::box(title = "Total de Vacinas Aplicadas", shiny::plotOutput("agregado"))
         )
       )
     )
