@@ -26,6 +26,7 @@ usethis::use_package("scales")
 usethis::use_package("zoo")
 usethis::use_package("shinydashboard")
 usethis::use_package("tibble")
+usethis::use_package("rsconnect")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
