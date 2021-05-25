@@ -27,6 +27,8 @@ usethis::use_package("zoo")
 usethis::use_package("shinydashboard")
 usethis::use_package("tibble")
 usethis::use_package("rsconnect")
+usethis::use_package("hunspell")
+usethis::use_package("spelling")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
