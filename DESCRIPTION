@@ -18,6 +18,7 @@ Imports:
     htmltools,
     hunspell,
     processx,
+    rmarkdown,
     rsconnect,
     scales,
     shiny (>= 1.6.0.9000),

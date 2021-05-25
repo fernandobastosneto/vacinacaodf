@@ -29,6 +29,7 @@ usethis::use_package("tibble")
 usethis::use_package("rsconnect")
 usethis::use_package("hunspell")
 usethis::use_package("spelling")
+usethis::use_package("rmarkdown")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
