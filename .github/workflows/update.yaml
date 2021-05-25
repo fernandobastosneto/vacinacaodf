@@ -28,7 +28,6 @@ jobs:
           install.packages("shiny")
           remotes::install_local(".")
           remotes::install_dev("golem")
-          remotes::install_dev("")
           remotes::install_dev("DBI")
           remotes::install_dev("bigrquery")
           remotes::install_dev("basedosdados")
