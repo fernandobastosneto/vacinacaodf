@@ -1,6 +1,5 @@
 #' @export
 #' 
-#' Indica quanto tempo falta seguindo a média diária
 
 quantotempofaltamediatotal <- function() {
   

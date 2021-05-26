@@ -117,7 +117,6 @@ app_server <- function( input, output, session ) {
   })
   
   
-  
   output$piramide <- shiny::renderPlot({
     vacinacaodf::piramide()
   })
