@@ -16,13 +16,13 @@ app_server <- function( input, output, session ) {
     )
   })
   
-  output$vacinadosdiaanterior <- shinydashboard::renderInfoBox({
+  output$mediatotal <- shinydashboard::renderInfoBox({
     shinydashboard::infoBox(
-      "Vacinados no Último Dia de Vacinação:",
-      paste0(vacinacaodf::vacinadosdiaanterior()),
-      icon = shiny::icon("fas fa-syringe"),
-      color = "navy"
-
+      "Média",
+      paste0(as.integer(vacinacaodf::mediatotal()), " Vacinados por dia"),
+      subtitle = "Desde o início da vacinação",
+      icon = shiny::icon("fas fa-star-of-life"),
+      color = "yellow"
     )
   })
   
@@ -36,23 +36,36 @@ app_server <- function( input, output, session ) {
     )
   })
   
-  output$mediamovelmudanca <- shinydashboard::renderInfoBox({
-    
-    if (stringr::str_detect(vacinacaodf::mediamoveludanca(), "desacelerando")) {
-      
-      shinydashboard::infoBox("Evolução da Média Móvel Diária",
-                             paste0(vacinacaodf::mediamoveludanca()), 
-                             icon = shiny::icon("far fa-thumbs-down"),
-                             color = "red")
+  output$vacinadosdiaanterior <- shinydashboard::renderInfoBox({
+    shinydashboard::infoBox(
+      "Vacinados no Último Dia de Vacinação:",
+      paste0(vacinacaodf::vacinadosdiaanterior()),
+      icon = shiny::icon("fas fa-syringe"),
+      color = "navy"
 
-    }
-    
-    else {
-      shinydashboard::infoBox("Evolução da Média Móvel Diária",
-                              paste0(vacinacaodf::mediamoveludanca()), 
-                              icon = shiny::icon("far fa-thumbs-up"),
-                              color = "blue")
-    }
+    )
+  })
+  
+  output$quantotempofaltamediatotal <- shinydashboard::renderInfoBox({
+    shinydashboard::infoBox(
+      "Quanto Tempo Falta - Média",
+      paste0("faltam ", vacinacaodf::quantotempofaltamediatotal(), " dias"),
+      subtitle = "para que todos recebam ao menos uma dose",
+      icon = shiny::icon("fas fa-hourglass-half"),
+      color = "olive",
+      width = 2,
+    )
+  })
+  
+  output$quantotempofalta <- shinydashboard::renderInfoBox({
+    shinydashboard::infoBox(
+      "Quanto Tempo Falta - Média Móvel de 7 Dias",
+      paste0("faltam ", vacinacaodf::quantotempofalta(), " dias"),
+      subtitle = "para que todos recebam ao menos uma dose",
+      icon = shiny::icon("fas fa-hourglass-half"),
+      color = "olive",
+      width = 2,
+    )
   })
   
   output$quantasvacinasfaltam <- shinydashboard::renderInfoBox({
@@ -64,15 +77,46 @@ app_server <- function( input, output, session ) {
     )
   })
   
-  output$quantotempofalta <- shinydashboard::renderInfoBox({
-    shinydashboard::infoBox(
-      "Quanto Tempo Falta",
-      paste0("Na média móvel, faltam ", vacinacaodf::quantotempofalta(), " dias"),
-      subtitle = "para que todos recebam ao menos uma dose",
-      icon = shiny::icon("fas fa-hourglass-half"),
-      color = "olive"
-    )
+  output$mediamudanca <- shinydashboard::renderInfoBox({
+    
+    if (stringr::str_detect(vacinacaodf::mediamudanca(), "desacelerando")) {
+      
+      shinydashboard::infoBox("Evolução da Média",
+                              paste0(vacinacaodf::mediamudanca()), 
+                              icon = shiny::icon("far fa-thumbs-down"),
+                              color = "red")
+      
+    }
+    
+    else {
+      shinydashboard::infoBox("Evolução da Média",
+                              paste0(vacinacaodf::mediamudanca()), 
+                              icon = shiny::icon("far fa-thumbs-up"),
+                              color = "blue")
+    }
   })
+  
+  
+  output$mediamovelmudanca <- shinydashboard::renderInfoBox({
+    
+    if (stringr::str_detect(vacinacaodf::mediamovelmudanca(), "desacelerando")) {
+      
+      shinydashboard::infoBox("Evolução da Média Móvel",
+                             paste0(vacinacaodf::mediamovelmudanca()), 
+                             icon = shiny::icon("far fa-thumbs-down"),
+                             color = "red")
+
+    }
+    
+    else {
+      shinydashboard::infoBox("Evolução da Média Móvel",
+                              paste0(vacinacaodf::mediamovelmudanca()), 
+                              icon = shiny::icon("far fa-thumbs-up"),
+                              color = "blue")
+    }
+  })
+  
+  
   
   output$piramide <- shiny::renderPlot({
     vacinacaodf::piramide()
@@ -89,4 +133,13 @@ app_server <- function( input, output, session ) {
   output$agregado <- shiny::renderPlot({
     vacinacaodf::agregado()
   })
+
+  output$mediavacinadostotal <- shiny::renderPlot({
+    vacinacaodf::mediavacinadostotal()
+  })
+  
+  output$dosesporvacina <- shiny::renderPlot({
+    vacinacaodf::dosesporvacina()
+  })
+  
 }

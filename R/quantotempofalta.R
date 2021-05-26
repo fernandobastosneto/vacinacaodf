@@ -1,4 +1,6 @@
 #' @export
+#' 
+#' Indica quanto tempo falta seguindo a média móvel de 7 dias
 
 quantotempofalta <- function() {
   
@@ -13,7 +15,8 @@ quantotempofalta <- function() {
   
   velocidade <- (as.integer(vacinacaodf::mediamovel7dias())/populacao_total)*100
   
-  dias = as.integer(quanto_falta/velocidade)
+  dias <- as.integer(quanto_falta/velocidade)
   
+  dias
   
 }

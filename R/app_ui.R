@@ -19,13 +19,18 @@ app_ui <- function(request) {
       shinydashboard::dashboardBody(
         fluidRow(
           shinydashboard::infoBoxOutput("ultimosdados"),
-          shinydashboard::infoBoxOutput("vacinadosdiaanterior"),
+          shinydashboard::infoBoxOutput("mediatotal"),
           shinydashboard::infoBoxOutput("mediamovel7dias")
         ),
         fluidRow(
-          shinydashboard::infoBoxOutput("mediamovelmudanca"),
+          shinydashboard::infoBoxOutput("vacinadosdiaanterior"),
+          shinydashboard::infoBoxOutput("quantotempofaltamediatotal"),
+          shinydashboard::infoBoxOutput("quantotempofalta"),
+        ),
+        fluidRow(
           shinydashboard::infoBoxOutput("quantasvacinasfaltam"),
-          shinydashboard::infoBoxOutput("quantotempofalta")
+          shinydashboard::infoBoxOutput("mediamudanca"),
+          shinydashboard::infoBoxOutput("mediamovelmudanca")
         ),
         fluidRow(
           shinydashboard::box(title = "Pirâmide Etária", shiny::plotOutput("piramide")),
@@ -34,6 +39,10 @@ app_ui <- function(request) {
         fluidRow(
           shinydashboard::box(title = "Média Móvel", shiny::plotOutput("mediamovel7diasgrafico")),
           shinydashboard::box(title = "Total de Vacinas Aplicadas", shiny::plotOutput("agregado"))
+        ),
+        fluidRow(
+          shinydashboard::box(title = "Média de Vacinados por Dia", shiny::plotOutput("mediavacinadostotal")),
+          shinydashboard::box(title = "Doses por Vacina", shiny::plotOutput("dosesporvacina"))
         )
       )
     )
